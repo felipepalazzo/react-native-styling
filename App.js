@@ -1,22 +1,15 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import RegistrationList from './src/components/RegistrationList'
-import { colors, sizes } from './src/styles/variables'
+import Nav from './src/components/Nav'
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
+        <Nav />
         <RegistrationList />
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.black,
-    paddingLeft: sizes.small,
-    paddingRight: sizes.small,
-  },
-})

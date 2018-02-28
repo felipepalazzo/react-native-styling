@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { colors, sizes } from '../styles/variables'
+import { colors, box, text } from '../styles/variables'
 
 class Registration extends React.Component {
   render() {
@@ -11,7 +11,11 @@ class Registration extends React.Component {
     } = this.props
     return (
       <View style={styles.card}>
-        <Text>{firstName} {lastName}</Text>
+        <View>
+          <Text style={styles.name}>
+            {firstName} {lastName}
+          </Text>
+        </View>
         <Text>{email}</Text>
       </View>
     )
@@ -21,12 +25,16 @@ class Registration extends React.Component {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.snow,
-    marginBottom: sizes.small,
-    paddingTop: sizes.small,
-    paddingRight: sizes.small,
-    paddingBottom: sizes.small,
-    paddingLeft: sizes.small,
+    marginBottom: box.small,
+    paddingTop: box.small,
+    paddingRight: box.small,
+    paddingBottom: box.small,
+    paddingLeft: box.small,
     borderRadius: 3,
+  },
+  name: {
+    fontWeight: text.bold,
+    fontSize: text.large,
   },
 })
 
