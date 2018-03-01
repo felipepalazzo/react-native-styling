@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
+import { Link } from 'react-router-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { colors, box, text } from '../styles/variables'
 
@@ -17,7 +18,7 @@ class Nav extends React.Component {
             color={colors.white}
             iconStyle={{marginRight: 5}}
             backgroundColor='transparent'>
-            <Text style={styles.backBtn}>Events</Text>
+            <Link to="/"><Text style={styles.backBtn}>Events</Text></Link>
           </Icon.Button>
         </View>
         <View>
