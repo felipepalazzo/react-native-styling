@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text, Button, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { Link } from 'react-router-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { colors, box, text } from '../../variables'
+import { COLORS, BOX, TEXT } from '../../variables'
 
 class Nav extends React.Component {
   _onPress() {
@@ -15,7 +15,7 @@ class Nav extends React.Component {
           <Icon.Button
             name="ios-arrow-back"
             size={20}
-            color={colors.white}
+            color={COLORS.white}
             iconStyle={{marginRight: 5}}
             backgroundColor='transparent'>
             <Link to="/">
@@ -26,12 +26,9 @@ class Nav extends React.Component {
         <View>
           <Text style={styles.title}>My Main Event</Text>
         </View>
-        <View style={styles.buttonView}>
-          <Button
-            title="Add"
-            color={colors.blue}
-            onPress={this._onPress} />
-        </View>
+        <TouchableOpacity onPress={this._onPress} style={styles.button}>
+          <Text>Add</Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -42,25 +39,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: box.large,
-    paddingLeft: box.small,
-    paddingRight: box.small,
-    paddingBottom: box.small,
-    backgroundColor: colors.blue,
+    paddingTop: BOX.large,
+    paddingLeft: BOX.small,
+    paddingRight: BOX.small,
+    paddingBottom: BOX.small,
+    backgroundColor: COLORS.blue,
   },
   title: {
-    color: colors.white,
-    textAlign: text.center,
-    fontSize: text.large,
+    color: COLORS.white,
+    textAlign: TEXT.center,
+    fontSize: TEXT.large,
   },
-  buttonView: {
-    backgroundColor: colors.white,
+  button: {
+    alignItems: 'center',
+    paddingTop: 10,
+    paddingBottom: 10,
     borderRadius: 3,
     width: 60,
+    backgroundColor: COLORS.white,
   },
   backBtn: {
-    fontSize: text.medium,
-    color: colors.white,
+    fontSize: TEXT.medium,
+    color: COLORS.white,
   },
 })
 

@@ -1,4 +1,4 @@
-export const colors = {
+export const COLORS = {
   ligthGrey: '#d9E1E8',
   snow: '#f3f3f3',
   black: '#22272B',
@@ -8,14 +8,14 @@ export const colors = {
   white: '#fff',
 }
 
-export const box = {
+export const BOX = {
   xsmall: 5,
   small: 10,
   medium: 20,
   large: 30,
 }
 
-export const text = {
+export const TEXT = {
   small: 14,
   medium: 16,
   large: 18,

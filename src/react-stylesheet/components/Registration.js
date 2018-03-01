@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { colors, box, text } from '../../variables'
+import { COLORS, BOX, TEXT } from '../../variables'
 
 class Registration extends React.Component {
   render() {
@@ -24,16 +24,16 @@ class Registration extends React.Component {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.snow,
-    marginBottom: box.small,
-    paddingTop: box.small,
-    paddingRight: box.small,
-    paddingBottom: box.small,
-    paddingLeft: box.small,
+    backgroundColor: COLORS.snow,
+    marginBottom: BOX.small,
+    paddingTop: BOX.small,
+    paddingRight: BOX.small,
+    paddingBottom: BOX.small,
+    paddingLeft: BOX.small,
     borderRadius: 3,
   },
   name: {
-    fontSize: text.large,
+    fontSize: TEXT.large,
   },
 })
 

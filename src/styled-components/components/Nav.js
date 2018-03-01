@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { Link } from 'react-router-native'
 import styled from 'styled-components'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { colors, box, text } from '../../variables'
+import { COLORS, BOX, TEXT } from '../../variables'
 
 import { StyledButton, StyledText } from './Styled'
 
@@ -11,8 +11,8 @@ const StyledView = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: ${colors.blue};
-  padding: ${box.large}px ${box.small}px ${box.small}px ${box.small}px;
+  background-color: ${COLORS.blue};
+  padding: ${BOX.large}px ${BOX.small}px ${BOX.small}px ${BOX.small}px;
 `
 
 class Nav extends React.Component {
@@ -26,13 +26,12 @@ class Nav extends React.Component {
           <Icon.Button
             name="ios-arrow-back"
             size={20}
-            color={colors.white}
+            color={COLORS.white}
             iconStyle={{marginRight: 5}}
             backgroundColor='transparent'>
             <Link to="/">
               <StyledText
-                color={colors.white}
-                size={text.large}>
+                color={COLORS.white}>
                 Events
               </StyledText>
             </Link>
@@ -40,8 +39,8 @@ class Nav extends React.Component {
         </View>
         <View>
           <StyledText
-            color={colors.white}
-            size={text.large}>
+            color={COLORS.white}
+            size={TEXT.large}>
             My Main Event
           </StyledText>
         </View>

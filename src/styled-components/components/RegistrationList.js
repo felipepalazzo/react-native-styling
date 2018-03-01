@@ -1,12 +1,11 @@
 import React from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
-import { COLORS, BOX } from '../../variables'
 import Registration from './Registration'
+import { StyledScrollView } from './Styled'
 
 class RegistrationList extends React.Component {
   render() {
     return(
-      <ScrollView style={styles.container}>
+      <StyledScrollView>
         {this.props.registers.map(register => (
           <Registration
             key={register.id}
@@ -15,18 +14,9 @@ class RegistrationList extends React.Component {
             email={register.email}
           />
         ))}
-      </ScrollView>
+      </StyledScrollView>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.black,
-    paddingLeft: BOX.small,
-    paddingRight: BOX.small,
-    paddingTop: BOX.medium,
-  },
-})
 
 export default RegistrationList

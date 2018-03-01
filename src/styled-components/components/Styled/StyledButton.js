@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../../../variables'
+import { COLORS } from '../../../variables'
 
 const ButtonContainer = styled.TouchableOpacity`
-  background-color: ${props => props.primary ? colors.white : colors.blue};
+  background-color: ${props => props.primary ? COLORS.white : COLORS.blue};
   border-radius: 3px;
-  width: 60;
-  padding: 10px 5px;
+  width: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `
 
 const Label = styled.Text`
