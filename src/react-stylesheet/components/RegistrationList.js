@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
-import { colors, box } from '../styles/variables'
+import { colors, box } from '../../variables'
 import Registration from './Registration'
 
 class RegistrationList extends React.Component {

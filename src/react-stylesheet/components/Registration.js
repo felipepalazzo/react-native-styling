@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { colors, box, text } from '../styles/variables'
+import { colors, box, text } from '../../variables'
 
 class Registration extends React.Component {
   render() {
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   name: {
-    fontWeight: text.bold,
     fontSize: text.large,
   },
 })

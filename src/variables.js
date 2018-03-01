@@ -16,9 +16,9 @@ export const box = {
 }
 
 export const text = {
-  bold: '600',
   small: 14,
   medium: 16,
   large: 18,
+  bold: 600,
   center: 'center',
 }

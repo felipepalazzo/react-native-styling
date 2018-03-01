@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
 import { Link } from 'react-router-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { colors, box, text } from '../styles/variables'
+import { colors, box, text } from '../../variables'
 
 class Nav extends React.Component {
   _onPress() {
@@ -18,7 +18,9 @@ class Nav extends React.Component {
             color={colors.white}
             iconStyle={{marginRight: 5}}
             backgroundColor='transparent'>
-            <Link to="/"><Text style={styles.backBtn}>Events</Text></Link>
+            <Link to="/">
+              <Text style={styles.backBtn}>Events</Text>
+            </Link>
           </Icon.Button>
         </View>
         <View>
@@ -50,11 +52,9 @@ const styles = StyleSheet.create({
     color: colors.white,
     textAlign: text.center,
     fontSize: text.large,
-    fontWeight: text.bold,
   },
   buttonView: {
     backgroundColor: colors.white,
-    fontWeight: text.bold,
     borderRadius: 3,
     width: 60,
   },
