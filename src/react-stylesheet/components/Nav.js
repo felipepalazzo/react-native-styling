@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import { Link } from 'react-router-native'
 import Icon from 'react-native-vector-icons/Ionicons'
+import AkButton from './AkButton'
 import { COLORS, BOX, TEXT } from '../../variables'
 
 class Nav extends React.Component {
@@ -26,9 +27,7 @@ class Nav extends React.Component {
         <View>
           <Text style={styles.title}>My Main Event</Text>
         </View>
-        <TouchableOpacity onPress={this._onPress} style={styles.button}>
-          <Text>Add</Text>
-        </TouchableOpacity>
+        <AkButton onPress={this._onPress} type="primary">Add</AkButton>
       </View>
     )
   }
@@ -49,14 +48,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: TEXT.center,
     fontSize: TEXT.large,
-  },
-  button: {
-    alignItems: 'center',
-    paddingTop: 10,
-    paddingBottom: 10,
-    borderRadius: 3,
-    width: 60,
-    backgroundColor: COLORS.white,
   },
   backBtn: {
     fontSize: TEXT.medium,
