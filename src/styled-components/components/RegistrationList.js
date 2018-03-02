@@ -4,9 +4,10 @@ import { StyledScrollView } from './Styled'
 
 class RegistrationList extends React.Component {
   render() {
+    const { registers } = this.props
     return(
       <StyledScrollView>
-        {this.props.registers.map(register => (
+        {registers.map(register => (
           <Registration
             key={register.id}
             firstName={register.first_name}

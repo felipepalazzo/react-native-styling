@@ -5,9 +5,10 @@ import Registration from './Registration'
 
 class RegistrationList extends React.Component {
   render() {
+    const { registers } = this.props
     return(
       <ScrollView style={styles.container}>
-        {this.props.registers.map(register => (
+        {registers.map(register => (
           <Registration
             key={register.id}
             firstName={register.first_name}
