@@ -15,9 +15,21 @@ const Label = styled(Text)`
   text-align: center;
 `
 
-const StyledButton = props =>
-  <ButtonContainer onPress={props.onPress} primary={props.primary}>
-    <Label>{props.children}</Label>
-  </ButtonContainer>
+// const StyledButton = props =>
+//   <ButtonContainer onPress={props.onPress} primary={props.primary}>
+//     <Label>{props.children}</Label>
+//   </ButtonContainer>
+
+class StyledButton extends React.Component {
+  render() {
+    console.log('StyledButton#render', this.props.primary)
+    return(
+      <ButtonContainer onPress={this.props.onPress} primary={this.props.primary}>
+        <Label>{this.props.children}</Label>
+      </ButtonContainer>
+    )
+  }
+}
+
 
 export default StyledButton

@@ -5,10 +5,13 @@ import { COLORS } from '../../variables'
 class AkButton extends React.Component {
   getStyle(type) {
     let styles = {}
-    if (type === 'primary') {
-      styles.button = Object.assign({}, base, primary)
-    } else {
-      styles.button = Object.assign({}, base, secondary)
+    styles.button = {
+      backgroundColor: type === 'primary' ? COLORS.white : COLORS.blue,
+      alignItems: 'center',
+      paddingTop: 10,
+      paddingBottom: 10,
+      borderRadius: 3,
+      width: 60,
     }
     return StyleSheet.create(styles).button
   }
@@ -20,22 +23,6 @@ class AkButton extends React.Component {
       </TouchableOpacity>
     )
   }
-}
-
-const base = {
-  alignItems: 'center',
-  paddingTop: 10,
-  paddingBottom: 10,
-  borderRadius: 3,
-  width: 60,
-}
-
-const primary = {
-  backgroundColor: COLORS.white,
-}
-
-const secondary = {
-  backgroundColor: COLORS.blue,
 }
 
 export default AkButton
