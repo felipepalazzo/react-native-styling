@@ -1,28 +1,26 @@
 import React from 'react'
 import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { COLORS } from '../../variables'
+import { button } from '../mixins'
 
-class AkButton extends React.Component {
-  getStyle(type) {
-    let styles = {}
-    styles.button = {
-      backgroundColor: type === 'primary' ? COLORS.white : COLORS.blue,
-      alignItems: 'center',
-      paddingTop: 10,
-      paddingBottom: 10,
-      borderRadius: 3,
-      width: 60,
-    }
-    return StyleSheet.create(styles).button
-  }
-  render() {
-    const { children, type, onPress } = this.props
-    return(
-      <TouchableOpacity onPress={onPress} style={this.getStyle(type)}>
-        <Text>{children}</Text>
-      </TouchableOpacity>
-    )
-  }
-}
+const styles = StyleSheet.create({
+  primary: {
+    ...button,
+    backgroundColor: COLORS.white,
+    width: 60,
+  },
+  secondary: {
+    ...button,
+    backgroundColor: COLORS.blue,
+    width: 60,
+  },
+})
+
+const AkButton = props =>
+  <TouchableOpacity
+    onPress={props.onPress}
+    style={[styles.button, props.primary ? styles.primary : styles.secondary]}>
+    <Text>{props.children}</Text>
+  </TouchableOpacity>
 
 export default AkButton

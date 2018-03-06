@@ -27,7 +27,7 @@ class Nav extends React.Component {
         <View>
           <Text style={styles.title}>My Main Event</Text>
         </View>
-        <AkButton onPress={this._onPress} type="primary">Add</AkButton>
+        <AkButton onPress={this._onPress} primary>Add</AkButton>
       </View>
     )
   }
