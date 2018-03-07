@@ -1,16 +1,20 @@
 import React from 'react'
 import { View } from 'react-native'
 import { Link } from 'react-router-native'
+import { ThemeProvider } from 'styled-components'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { COLORS, TEXT } from '../../variables'
+import { COLORS } from '../../variables'
 
-import { StyledButton, StyledText, StyledNav } from './Styled'
+import { StyledButton, StyledText, StyledNav, StyledTitle } from './Styled'
 
 class Nav extends React.Component {
   _onPress() {
     console.log('Pressed')
   }
   render() {
+    const theme = {
+      main: COLORS.white,
+    }
     return(
       <StyledNav>
         <View>
@@ -29,11 +33,11 @@ class Nav extends React.Component {
           </Icon.Button>
         </View>
         <View>
-          <StyledText
-            color={COLORS.white}
-            size={TEXT.large}>
-            My Main Event
-          </StyledText>
+          <ThemeProvider theme={theme}>
+            <StyledTitle>
+              My Main Event
+            </StyledTitle>
+          </ThemeProvider>
         </View>
         <StyledButton primary onPress={this._onPress}>
           Add

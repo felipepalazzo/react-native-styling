@@ -3,6 +3,7 @@ import StyledText from './StyledText'
 import StyledCard from './StyledCard'
 import StyledScrollView from './StyledScrollView'
 import StyledNav from './StyledNav'
+import StyledTitle from './StyledTitle'
 
 export {
   StyledButton,
@@ -10,4 +11,5 @@ export {
   StyledCard,
   StyledScrollView,
   StyledNav,
+  StyledTitle,
 }

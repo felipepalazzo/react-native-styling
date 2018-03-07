@@ -1,7 +1,15 @@
+import { BOX, COLORS } from '../../variables'
+
 export const button = {
   alignItems: 'center',
-  paddingTop: 10,
-  paddingBottom: 10,
+  paddingTop: BOX.small,
+  paddingBottom: BOX.small,
   borderRadius: 3,
   width: 40,
+}
+
+export const theme = {
+  main: {
+    color: 'lightsalmon'
+  },
 }
