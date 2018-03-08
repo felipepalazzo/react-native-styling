@@ -16,6 +16,7 @@
     "jest-styled-components": "^5.0.0",
     "react-dom": "^16.2.0",
     "react-native-scripts": "1.11.1",
+    "react-styleguidist": "^6.2.7",
     "react-test-renderer": "16.2.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
