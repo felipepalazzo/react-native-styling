@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Text } from 'react-native'
-import { TEXT, COLORS } from '../../../variables'
+import { TEXT } from '../../../variables'
 
 const StyledTitle = styled(Text)`
   color: ${props => props.theme.main};
