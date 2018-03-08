@@ -1,16 +1,16 @@
 import React from 'react'
 import { Text, StyleSheet } from 'react-native'
 import { TEXT } from '../../variables'
-import { theme } from '../mixins'
 import PropTypes from 'prop-types'
 
 class Title extends React.Component {
   createStyles(custom) {
-    const current = custom ? custom : theme.main
+    const current = custom ? custom : {}
     return(StyleSheet.create({
       title: {
-        ...current,
+        color: 'lightsalmon',
         fontSize: TEXT.large,
+        ...current,
       }
     }))
   }
