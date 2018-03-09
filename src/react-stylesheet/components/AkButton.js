@@ -4,13 +4,12 @@ import { COLORS } from '../../variables'
 import { button } from '../mixins'
 
 const styles = StyleSheet.create({
+  button: button,
   primary: {
-    ...button,
     backgroundColor: COLORS.white,
     width: 60,
   },
   secondary: {
-    ...button,
     backgroundColor: COLORS.blue,
     width: 60,
   },

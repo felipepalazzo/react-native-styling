@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-plugin-react-native-web": "^0.5.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react-native": "^4.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.1",
@@ -12,12 +17,15 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
+    "file-loader": "^1.1.11",
     "jest-expo": "25.1.0",
     "jest-styled-components": "^5.0.0",
     "react-dom": "^16.2.0",
     "react-native-scripts": "1.11.1",
+    "react-native-web": "^0.5.2",
     "react-styleguidist": "^6.2.7",
-    "react-test-renderer": "16.2.0"
+    "react-test-renderer": "16.2.0",
+    "webpack": "^4.1.1"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -25,7 +33,9 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node node_modules/jest/bin/jest.js",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "jest": {
     "preset": "jest-expo",
